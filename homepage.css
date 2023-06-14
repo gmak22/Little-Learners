@@ -1,0 +1,88 @@
+#navbar{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 40PX;
+}
+
+#navbar div{
+    align-items: center;
+}
+
+#logo{
+    width: 10%;
+}
+
+#logo img{
+    width: 100%;
+}
+
+#navbar > div:nth-child(2){
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#navbar > div:nth-child(3){
+    width: 20%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+#navbar button{
+    width: 40%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 7px;
+    font-weight: bolder;
+}
+
+#navbar button:nth-child(1){
+    background-color: white;
+    color: black; 
+}
+
+#navbar button:nth-child(1):hover{
+    background-color: whitesmoke;
+    transition: all 0.5s ease-in;
+}
+
+#navbar button:nth-child(2):hover{
+    background-color: gray;
+    transition: all 0.5s ease-in;
+}
+
+#navbar button:nth-child(2){
+    background-color: black;
+    color: white; 
+}
+
+#top div{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+#top div p{
+    width: 30%;
+    font-size: 20px;
+}
+
+#top > div > h1{
+    font-size: 130px;
+    font-weight: lighter;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#top div img{
+    height: 150px;
+    border-radius: 20px;
+}
+
