@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn with Fun | Little Learners</title>
+    <link rel="stylesheet" href="./learn.css">
+</head>
+<body>
+    <div id="main">
+        <div id="navbar">
+            <div id="logo">
+                <img src="/images/Logo.png" alt="">
+            </div>
+            <div id="navmenu">
+                <a href="./homepage.html">Home</a>
+                <a href="./learn.html">Learn with fun</a>
+                <a href="./courses.html">Courses</a>
+                <a href="">Admissions</a>
+                <a href="">Testimonial</a>
+            </div>
+            <div id="navbuttons">
+                <button id="loginBtn">Log in</button>
+                <button id="signupBtn">Sign up</button>
+            </div>
+        </div>
+        <h1 class="heading"> Experience games that educate, enrich, engage</h1>
+        <div id="desc">
+            <div class="img">
+                <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/home/modularPage/experiance_game-0a90d2660bebc67ebf91.png" alt="">
+            </div>
+            <div class="para">
+                <p>As your child explores new worlds and befriends magical creatures, they discover more than one way to solve a problem</p>
+            </div>
+            <div class="para">
+                <p>With no timed challenges or overbearing skill progression, our games offer a safe space for your child to explore and make mistakes</p>
+            </div>
+            <div class="para">
+                <p>Whether it's extra practice or a fun challenge, SplashLearn's games deliver real learning outcomes, always!</p>
+            </div>
+            <div>
+                <h3>Children who play these games more than 4 times a week show learning improvement of more than 77% within the first 2 months</h3>
+            </div>   
+        </div>
+        <section id="games">
+            <div>
+                <img src="./images/favpng_button-clip-art.png" alt="" class="scrollBtnL">
+            </div>
+            
+            <div class="cover">
+                <div class="scroll-images">
+                    <div class="slides">
+                        <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/Curriculum-images/Playable/Math-images/pk_2x.png" alt="">
+                        <h2>Pre-Kindergarten</h2>
+                        <div class="category">
+                            <button>Counting</button>
+                            <button>Shapes</button>
+                            <button>Addition</button>
+                        </div>
+                        <div>
+                            <button class="enterBtn">Play Now</button>
+                        </div>
+                        
+                    </div>
+                    <div class="slides">
+                        <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/Curriculum-images/Playable/Math-images/k_2x.png" alt="">
+                        <h2>Kindergarten</h2>
+                        <div class="category">
+                            <button>Number Sense</button>
+                            <button>Addition</button>
+                            <button>Geometry</button>
+                        </div>
+                        <button class="enterBtn">Enter</button>
+                    </div>
+                    <div class="slides">
+                        <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/Curriculum-images/Playable/Math-images/1_2x.png" alt="">
+                        <h2>Grade 1</h2>
+                        <div class="category">
+                            <button>Time</button>
+                            <button>Addition</button>
+                            <button>Subtraction</button>
+                        </div>
+                        <button class="enterBtn">Enter</button>
+                    </div>
+                    <div class="slides">
+                        <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/Curriculum-images/Playable/Math-images/2_2x.png" alt="">
+                        <h2>Grade 2</h2>
+                        <div class="category">
+                            <button>Counting</button>
+                            <button>Addition</button>
+                            <button>Subtraction</button>
+                        </div>
+                        <button class="enterBtn">Enter</button>
+                    </div>
+                    <div class="slides">
+                        <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/Curriculum-images/Playable/Math-images/3_2x.png" alt="">
+                        <h2>Grade 3</h2>
+                        <div class="category">
+                            <button>Multiplication</button>
+                            <button>Division</button>
+                            <button>Fractions</button>
+                        </div>
+                        <button class="enterBtn">Enter</button>
+                    </div>
+                    <div class="slides">
+                        <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/Curriculum-images/Playable/Math-images/4_2x.png" alt="">
+                        <h2>Grade 4</h2>
+                        <div class="category">
+                            <button>Multiplication</button>
+                            <button>Decimals</button>
+                            <button>Fractions</button>
+                        </div>
+                        <button class="enterBtn">Enter</button>
+                    </div>
+                    <div class="slides">
+                        <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/Curriculum-images/Playable/Math-images/5_2x.png" alt="">
+                        <h2>Grade 5</h2>
+                        <div class="category">
+                            <button>Fractions</button>
+                            <button>Decimals</button>
+                            <button>Algebra</button>
+                        </div>
+                        <button class="enterBtn">Enter</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./images/favpng_button-clip-art.png" alt="" class="scrollBtnR">
+            </div>
+        </section>
+       
+        
+        <h2 id="display">0</h2>
+</body>
+</html>
+<script>
+    let prev = document.querySelector("#prev")
+    let next = document.querySelector("#next")
+    let slide = document.querySelector(".slides")
+    let dispaly = document.querySelector("#display")
+    let scrollBtnL = document.querySelector(".scrollBtnL")
+    let scrollBtnR = document.querySelector(".scrollBtnR")
+
+    let scroll = document.querySelector(".scroll-images")
+    scrollBtnL.addEventListener("click",()=>{
+        scroll.scrollBy(-360,0)
+    })
+
+    scrollBtnR.addEventListener("click",()=>{
+        scroll.scrollBy(360,0)
+    })
+
+</script>

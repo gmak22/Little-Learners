@@ -1,0 +1,75 @@
+#navbar{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 40PX;
+}
+
+#navbar div{
+    align-items: center;
+}
+
+#logo{
+    width: 10%;
+}
+
+#logo img{
+    width: 100%;
+}
+
+#navbar > div:nth-child(2){
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#navbar > div:nth-child(3){
+    width: 30%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+#myForm{
+    width: 30%;
+    margin: auto;
+}
+
+#signupBtn{
+    width: 80px;
+    background-color: green;
+    color: white;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#notify{
+    width: 95%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.label{
+    margin-bottom: 50px;
+    font-weight: bolder;
+    text-align: left;
+}
+
+#name, #email, #password{
+    width: 95%;
+    height: 25px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    background-color: rgb(248, 237, 237);;
+}
+
+#name:hover, #email:hover, #password:hover{
+    background-color: pink
+}
