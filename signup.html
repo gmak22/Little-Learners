@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Little Learners</title>
+    <link rel="stylesheet" href="./signup.css">
+</head>
+<body>
+    <div id="main">
+        <div id="navbar">
+            <div id="logo">
+                <img src="/images/Logo.png" alt="">
+            </div>
+            <div id="navmenu">
+                <a href="homepage.html">Home</a>
+                <a href="learn.html">Learn with fun</a>
+                <a href="">Courses</a>
+                <a href="">Admissions</a>
+                <a href="">Testimonial</a>
+            </div>
+        </div>
+    </div>
+    <form id="myForm">
+        <label for="Name" class="label">Name</label>
+        <br>
+        <input type="text" id="name" placeholder="Enter your name">
+        <br>
+        <label for="email" class="label">Email</label>
+        <br>
+        <input type="email" id="email" placeholder="Enter your email">
+        <br>
+        <label for="password" class="label">Password</label>
+        <br>
+        <input type="text" id="password" placeholder="Enter your password">
+        <br>
+        <div id="notify">
+            <p>Already a member?</p>
+            <a href="./login.html">Sign in</a>
+        </div>
+        <input type="submit" value="Sign up" id="signupBtn">
+    </form>
+</body>
+</html>
+<script>
+    let form = document.querySelector("#myForm")
+    let name =  document.querySelector("#name")
+    let email =  document.querySelector("#email")
+    let password =  document.querySelector("#password")
+
+    let LSData=JSON.parse(localStorage.getItem("sign-up")) || [];
+
+    form.addEventListener("submit", function(a){
+    a.preventDefault();
+   
+    let obj={
+        name : name.value,
+        id : Math.random()*1000+1+name.value,
+        email : email.value,
+        password : password.value, 
+    }
+
+    for(let i=0;i<LSData.length;i++)
+    {
+        if(email.value != "" && LSData[i].email === email.value)
+        {
+            return alert("Email already exist!");
+        }
+    }
+    if(email.value == "" && password.value == "") alert("Please enter valid email")
+    if(email.value != "" && password.value != "")
+    {
+        alert("Account created successfully")
+        LSData.push(obj);
+        localStorage.setItem("sign-up",JSON.stringify(LSData))
+    }
+})
+</script>

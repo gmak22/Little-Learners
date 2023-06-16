@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In | Little Learners</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div id="main">
+        <div id="navbar">
+            <div id="logo">
+                <img src="/images/Logo.png" alt="">
+            </div>
+            <div id="navmenu">
+                <a href="homepage.html">Home</a>
+                <a href="learn.html">Learn with fun</a>
+                <a href="">Courses</a>
+                <a href="">Admissions</a>
+                <a href="">Testimonial</a>
+            </div>
+        </div>
+        <form id="myForm">
+            <label for="email" class="label">Email</label>
+            <br>
+            <input type="email" id="email" placeholder="Enter your email">
+            <br>
+            <label for="password" class="label">Password</label>
+            <br>
+            <input type="password" id="password" placeholder="Enter your password">
+            <br>
+            <div id="notify">
+                <p>Not a member?</p>
+                <a href="./signup.html">Sign-up now</a>
+            </div>
+            <input type="submit" value="Log in" id="loginBtn">
+        </form>
+    </div>
+    
+</body>
+</html>
+<script>
+    let form = document.querySelector("#myForm")
+    let email =  document.querySelector("#email")
+    let password =  document.querySelector("#password")
+    let display = document.querySelector("#display")
+    let profile = document.querySelector("#profile")
+    let logoutBtn = document.querySelector("#logoutBtn")
+
+
+    let LSData=JSON.parse(localStorage.getItem("sign-up")) || [];
+
+    form.addEventListener("submit", function(a){
+    a.preventDefault();
+
+    let flag = false;
+    for(let i=0;i<LSData.length;i++)
+    {
+        if(LSData[i].email !== "" || LSData[i].password !== "")
+        {
+            if(LSData[i].email === email.value && LSData[i].password === password.value)
+            {
+                flag = true;
+            }
+        }
+    }
+
+    if(flag==true)
+    {
+        alert("Logged in")
+        window.location.href = "homepage.html"
+    }
+    else
+    {
+        alert("Incorrect email or password");
+    }
+})    
+
+
+
+</script>
