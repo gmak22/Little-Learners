@@ -5,41 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | Little Learners</title>
     <link rel="stylesheet" href="./signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="main">
-        <div id="navbar">
-            <div id="logo">
-                <img src="/images/Logo.png" alt="">
+        <form id="myForm">
+            <h2 style="text-align: center">Sign Up</h2>
+            <p style="text-align: center">Create a free account with your email</p>
+            <label for="Name" class="label">Name</label>
+            <br>
+            <input type="text" id="name" placeholder="Enter your name">
+            <br>
+            <label for="email" class="label">Email</label>
+            <br>
+            <input type="email" id="email" placeholder="Enter your email">
+            <br>
+            <label for="password" class="label">Password</label>
+            <br>
+            <input type="text" id="password" placeholder="Create New password">
+            <br>
+            <div style="text-align: center"><input type="submit" value="Sign up" id="signupBtn"></div>
+            
+            <div id="notify">
+                <p>Already a member?</p>
+                <a href="./login.html">Sign in</a>
             </div>
-            <div id="navmenu">
-                <a href="homepage.html">Home</a>
-                <a href="learn.html">Learn with fun</a>
-                <a href="">Courses</a>
-                <a href="">Admissions</a>
-                <a href="">Testimonial</a>
-            </div>
-        </div>
+        </form>
     </div>
-    <form id="myForm">
-        <label for="Name" class="label">Name</label>
-        <br>
-        <input type="text" id="name" placeholder="Enter your name">
-        <br>
-        <label for="email" class="label">Email</label>
-        <br>
-        <input type="email" id="email" placeholder="Enter your email">
-        <br>
-        <label for="password" class="label">Password</label>
-        <br>
-        <input type="text" id="password" placeholder="Enter your password">
-        <br>
-        <div id="notify">
-            <p>Already a member?</p>
-            <a href="./login.html">Sign in</a>
-        </div>
-        <input type="submit" value="Sign up" id="signupBtn">
-    </form>
 </body>
 </html>
 <script>

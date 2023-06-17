@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn with Fun | Little Learners</title>
     <link rel="stylesheet" href="./learn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="main">
@@ -13,9 +16,9 @@
                 <img src="/images/Logo.png" alt="">
             </div>
             <div id="navmenu">
-                <a href="./homepage.html">Home</a>
-                <a href="./learn.html">Learn with fun</a>
-                <a href="./courses.html">Courses</a>
+                <a href="homepage.html">Home</a>
+                <a href="learn.html">Learn with fun</a>
+                <a href="courses.html">Courses</a>
                 <a href="">Admissions</a>
                 <a href="">Testimonial</a>
             </div>
@@ -70,7 +73,7 @@
                             <button>Addition</button>
                             <button>Geometry</button>
                         </div>
-                        <button class="enterBtn">Enter</button>
+                        <button class="enterBtn">Play Now</button>
                     </div>
                     <div class="slides">
                         <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/Curriculum-images/Playable/Math-images/1_2x.png" alt="">
@@ -80,7 +83,7 @@
                             <button>Addition</button>
                             <button>Subtraction</button>
                         </div>
-                        <button class="enterBtn">Enter</button>
+                        <button class="enterBtn">Play Now</button>
                     </div>
                     <div class="slides">
                         <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/Curriculum-images/Playable/Math-images/2_2x.png" alt="">
@@ -90,7 +93,7 @@
                             <button>Addition</button>
                             <button>Subtraction</button>
                         </div>
-                        <button class="enterBtn">Enter</button>
+                        <button class="enterBtn">Play Now</button>
                     </div>
                     <div class="slides">
                         <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/Curriculum-images/Playable/Math-images/3_2x.png" alt="">
@@ -100,7 +103,7 @@
                             <button>Division</button>
                             <button>Fractions</button>
                         </div>
-                        <button class="enterBtn">Enter</button>
+                        <button class="enterBtn">Play Now</button>
                     </div>
                     <div class="slides">
                         <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/Curriculum-images/Playable/Math-images/4_2x.png" alt="">
@@ -110,7 +113,7 @@
                             <button>Decimals</button>
                             <button>Fractions</button>
                         </div>
-                        <button class="enterBtn">Enter</button>
+                        <button class="enterBtn">Play Now</button>
                     </div>
                     <div class="slides">
                         <img src="https://cdn.splashmath.com/web_ui/assets/images/loggedout/Curriculum-images/Playable/Math-images/5_2x.png" alt="">
@@ -120,7 +123,7 @@
                             <button>Decimals</button>
                             <button>Algebra</button>
                         </div>
-                        <button class="enterBtn">Enter</button>
+                        <button class="enterBtn">Play Now</button>
                     </div>
                 </div>
             </div>
@@ -128,9 +131,6 @@
                 <img src="./images/favpng_button-clip-art.png" alt="" class="scrollBtnR">
             </div>
         </section>
-       
-        
-        <h2 id="display">0</h2>
 </body>
 </html>
 <script>
@@ -140,6 +140,16 @@
     let dispaly = document.querySelector("#display")
     let scrollBtnL = document.querySelector(".scrollBtnL")
     let scrollBtnR = document.querySelector(".scrollBtnR")
+    let loginBtn = document.querySelector("#loginBtn")
+    let signupBtn = document.querySelector("#signupBtn")
+
+    loginBtn.addEventListener("click", () => {
+        window.location.href = "login.html"
+    })
+
+    signupBtn.addEventListener("click", () => {
+        window.location.href = "signup.html"
+    })
 
     let scroll = document.querySelector(".scroll-images")
     scrollBtnL.addEventListener("click",()=>{
@@ -149,5 +159,4 @@
     scrollBtnR.addEventListener("click",()=>{
         scroll.scrollBy(360,0)
     })
-
 </script>
