@@ -1,3 +1,7 @@
+#main{
+    padding: 50px;
+}
+
 #navbar{
     width: 80%;
     display: flex;
@@ -35,14 +39,26 @@
 #myForm{
     width: 30%;
     margin: auto;
+    background-color: rgb(242,185,78);
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+}
+
+#myForm p{
+    margin-bottom: 20px;
+    font-size: large; 
 }
 
 #signupBtn{
-    width: 80px;
+    width: 90px;
     background-color: green;
     color: white;
     height: 30px;
+    border: 1px transparent;
     border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: large;
 }
 
 #notify{
@@ -55,18 +71,26 @@
     margin-bottom: 30px;
 }
 
+#notify a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: blue;
+}
+
 .label{
     margin-bottom: 50px;
     font-weight: bolder;
-    text-align: left;
+    text-align: center;
 }
 
 #name, #email, #password{
     width: 95%;
     height: 25px;
+    font-size: medium;
     margin-top: 8px;
     margin-bottom: 30px;
     border-radius: 6px;
+    padding: 5px;
     background-color: rgb(248, 237, 237);;
 }
 

@@ -5,23 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In | Little Learners</title>
     <link rel="stylesheet" href="./login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="main">
-        <div id="navbar">
-            <div id="logo">
-                <img src="/images/Logo.png" alt="">
-            </div>
-            <div id="navmenu">
-                <a href="homepage.html">Home</a>
-                <a href="learn.html">Learn with fun</a>
-                <a href="">Courses</a>
-                <a href="">Admissions</a>
-                <a href="">Testimonial</a>
-            </div>
-        </div>
         <form id="myForm">
-            <label for="email" class="label">Email</label>
+            <h2 style="text-align: center;">Log in to your account</h2>
+            <label for="email" class="label" style="text-align: left;">Email</label>
             <br>
             <input type="email" id="email" placeholder="Enter your email">
             <br>
@@ -29,11 +21,12 @@
             <br>
             <input type="password" id="password" placeholder="Enter your password">
             <br>
+            <div style="text-align: center;"><button id="loginBtn" >Log in</button></div>
+            
             <div id="notify">
                 <p>Not a member?</p>
-                <a href="./signup.html">Sign-up now</a>
+                <a href="./signup.html">Sign up</a>
             </div>
-            <input type="submit" value="Log in" id="loginBtn">
         </form>
     </div>
     
@@ -43,10 +36,7 @@
     let form = document.querySelector("#myForm")
     let email =  document.querySelector("#email")
     let password =  document.querySelector("#password")
-    let display = document.querySelector("#display")
-    let profile = document.querySelector("#profile")
-    let logoutBtn = document.querySelector("#logoutBtn")
-
+    let loginBtn = document.querySelector("#loginBtn")
 
     let LSData=JSON.parse(localStorage.getItem("sign-up")) || [];
 
@@ -75,7 +65,4 @@
         alert("Incorrect email or password");
     }
 })    
-
-
-
 </script>

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little Learners</title>
     <link rel="stylesheet" href="./homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="main">
@@ -15,7 +18,7 @@
             <div id="navmenu">
                 <a href="homepage.html">Home</a>
                 <a href="learn.html">Learn with fun</a>
-                <a href="">Courses</a>
+                <a href="courses.html">Courses</a>
                 <a href="">Admissions</a>
                 <a href="">Testimonial</a>
             </div>
@@ -124,7 +127,7 @@
                 <h1>Subscribe To Our Newsletter</h1>
                 <h3>Teaches You How To Communicate Your Unique Comedy Skillfully. Virtual comedy workshop. Virtual stand
                     up comedy. Virtual comedy class.</h3>
-                <input type="email" placeholder="Enter your E-mail address">
+                <input type="email" placeholder="Enter your E-mail address" id="subInp">
                 <button id="subBtn">Subscribe</button>
             </div>
             <div>
@@ -144,7 +147,7 @@
             </div>
             <div class="line"></div>
             <div class="right">
-                <table>
+                <table class="table">
                     <tbody>
                         <tr class="row">
                             <td>Address</td>
@@ -186,8 +189,6 @@
     let signupBtn = document.querySelector("#signupBtn")
     let subBtn = document.querySelector("#subBtn")
     let subInp = document.querySelector("input")
-    let profile = document.querySelector("#profile")
-    let logoutBtn = document.querySelector("#logoutBtn")
 
     loginBtn.addEventListener("click", () => {
         window.location.href = "login.html"
@@ -196,4 +197,14 @@
     signupBtn.addEventListener("click", () => {
         window.location.href = "signup.html"
     })
+
+    if(subInp.value != ""){
+        subBtn.addEventListener("click", () => {
+        subBtn.innerText = "Subscribed";
+        subInp.value = "";
+        setTimeout(() => {
+            subBtn.innerText = "Subscribe";
+        }, 3000);
+        })
+    }
 </script>

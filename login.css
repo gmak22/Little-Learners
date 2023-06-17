@@ -1,3 +1,7 @@
+#main{
+    padding: 80px;
+}
+
 #navbar{
     width: 80%;
     display: flex;
@@ -54,14 +58,26 @@
     margin: auto;
     width: 30%;
     justify-content: center;
+    background-color: rgb(198, 230, 231);
+    padding: 20px;
+    border-radius: 15px;
+    /* text-align: center; */
+    font-family: 'Poppins', sans-serif;
+}
+
+#myForm p{
+    margin-bottom: 20px;
 }
 
 #loginBtn{
-    width: 80px;
+    width: 90px;
     background-color: blue;
     color: white;
     height: 30px;
+    border: 1px transparent;
     border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: large;  
 }
 
 
@@ -75,7 +91,13 @@
     margin-bottom: 30px;
 }
 
-.label{
+#notify a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: blue;
+}
+
+#myForm > .label{
     margin-bottom: 50px;
     font-weight: bolder;
     text-align: left;
@@ -84,8 +106,10 @@
 #email, #password{
     width: 95%;
     height: 25px;
+    font-size: medium;
     margin-top: 8px;
     margin-bottom: 30px;
+    padding: 5px;
     border-radius: 6px;
     background-color: rgb(248, 237, 237);;
 }

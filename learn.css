@@ -5,6 +5,20 @@
     margin: auto;
     margin-bottom: 50px;
     margin-top: 40PX;
+    font-family: 'Poppins', sans-serif;
+}
+
+#navbar a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    padding: 10px;
+}
+
+#navbar a:hover{
+    background-color: #caf0f8;
+    color: #06D6A0;
+    border-radius: 10px;
 }
 
 #navbar div{
@@ -12,7 +26,7 @@
 }
 
 #logo{
-    width: 10%;
+    width: 15%;
 }
 
 #logo img{
@@ -20,7 +34,7 @@
 }
 
 #navbar > div:nth-child(2){
-    width: 45%;
+    width: 55%;
     display: flex;
     justify-content: space-around;
 }
@@ -64,14 +78,17 @@
     margin: auto;
     text-align: center;
     margin-bottom: 100px;
+    font-family: 'Poppins', sans-serif;
 }
 
 #desc{
     width: 90%;
     margin: auto;
+    align-items: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    font-family: 'Poppins', sans-serif;
     grid-template-areas: 
     "one two"
     "one three"
@@ -87,7 +104,6 @@
 #desc > div{
     width: 90%;
 }
-
 
 #desc div:nth-child(1){
     grid-area: one;
@@ -115,6 +131,7 @@
     margin: auto;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cover{
@@ -193,19 +210,20 @@
 }
 
 .enterBtn{
-    width: 50%;
+    width: 30%;
     margin-top: 10px;
     margin: auto;
     text-align: center;
+    font-family: 'Pacifico', cursive;
+    border: transparent;
+    border-radius: 15px;
+    background-color: purple;
+    color: white;
 }
 
-
 .scrollBtnR{
-
     width: 60px;
     height: 60px;
-   
-
 }
 
 .scrollBtnL{

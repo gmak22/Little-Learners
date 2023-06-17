@@ -1,0 +1,189 @@
+#main{
+    margin: auto;
+}
+
+#main h1{
+    font-size: 130px;
+    font-weight: lighter;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+#navbar{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 40PX;
+    font-family: 'Poppins', sans-serif;
+}
+
+#navbar a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    padding: 10px;
+}
+
+#navbar a:hover{
+    background-color: #caf0f8;
+    color: #06D6A0;
+    border-radius: 10px;
+}
+
+#navbar div{
+    align-items: center;
+}
+
+#logo{
+    width: 15%;
+}
+
+#logo img{
+    width: 100%;
+}
+
+#navbar > div:nth-child(2){
+    width: 55%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#navbar > div:nth-child(3){
+    width: 20%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+#navbar button{
+    width: 40%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 7px;
+    font-weight: bolder;
+}
+
+#navbar button:nth-child(1){
+    background-color: white;
+    color: black; 
+}
+
+#navbar button:nth-child(1):hover{
+    background-color: whitesmoke;
+    transition: all 0.5s ease-in;
+}
+
+#navbar button:nth-child(2):hover{
+    background-color: gray;
+    transition: all 0.5s ease-in;
+}
+
+#navbar button:nth-child(2){
+    background-color: black;
+    color: white; 
+}
+
+#content{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "one two three"
+    "four five six"
+    "seven 0 0";
+}
+
+#content > div{
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 50px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#content img{
+    width: 100%;
+    height: 40%;
+    margin-bottom: 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 15px;
+}
+
+#content button{
+    background-color: rgb(215, 221, 230);
+    color: blue;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#content div:nth-child(1){
+    grid-area: one;
+}
+
+#content div:nth-child(2){
+    grid-area: two;
+}
+
+#content div:nth-child(3){
+    grid-area: three;
+}
+
+#content div:nth-child(4){
+    grid-area: four;
+}
+
+#content div:nth-child(5){
+    grid-area: five;
+}
+
+#content div:nth-child(6){
+    grid-area: six;
+}
+
+#content div:nth-child(7){
+    grid-area: seven;
+}
+
+/* Medium screens */
+@media all and (min-width: 401px) and (max-width: 800px){
+    #main h1{
+        font-size: 100px;
+    }
+
+    #content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "one two"
+        "three four" 
+        "five six"
+        "seven 0";
+    }
+
+}
+
+/* Small screens */
+@media all and (min-width: 100px) and (max-width: 400px){
+    #main h1{
+        font-size: 100px;
+    }
+
+    #content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four" 
+        "five"
+        "six"
+        "seven";
+    }
+}
