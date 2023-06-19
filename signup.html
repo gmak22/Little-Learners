@@ -16,15 +16,15 @@
             <p style="text-align: center">Create a free account with your email</p>
             <label for="Name" class="label">Name</label>
             <br>
-            <input type="text" id="name" placeholder="Enter your name">
+            <input type="text" id="nameInput" placeholder="Enter your name">
             <br>
             <label for="email" class="label">Email</label>
             <br>
-            <input type="email" id="email" placeholder="Enter your email">
+            <input type="email" id="emailInput" placeholder="Enter your email">
             <br>
             <label for="password" class="label">Password</label>
             <br>
-            <input type="text" id="password" placeholder="Create New password">
+            <input type="text" id="passwordInput" placeholder="Create new password">
             <br>
             <div style="text-align: center"><input type="submit" value="Sign up" id="signupBtn"></div>
             
@@ -38,35 +38,36 @@
 </html>
 <script>
     let form = document.querySelector("#myForm")
-    let name =  document.querySelector("#name")
-    let email =  document.querySelector("#email")
-    let password =  document.querySelector("#password")
+    let nameInput =  document.querySelector("#nameInput")
+    let emailInput =  document.querySelector("#emailInput")
+    let passwordInput =  document.querySelector("#passwordInput")
+    let signupBtn =  document.querySelector("#signupBtn")
+    
+    let savedData = JSON.parse(localStorage.getItem("signup")) || [];
 
-    let LSData=JSON.parse(localStorage.getItem("sign-up")) || [];
+    signupBtn.addEventListener("click", (b) => {
+      b.preventDefault();
+      let name = nameInput.value;
+      let email = emailInput.value;
+      let password = passwordInput.value;
 
-    form.addEventListener("submit", function(a){
-    a.preventDefault();
-   
-    let obj={
-        name : name.value,
-        id : Math.random()*1000+1+name.value,
-        email : email.value,
-        password : password.value, 
-    }
-
-    for(let i=0;i<LSData.length;i++)
+    for(let i=0;i<savedData.length;i++)
     {
-        if(email.value != "" && LSData[i].email === email.value)
+        if(email != "" && savedData[i].email === email)
         {
-            return alert("Email already exist!");
+            return alert("Account already exist!");
         }
     }
-    if(email.value == "" && password.value == "") alert("Please enter valid email")
-    if(email.value != "" && password.value != "")
-    {
-        alert("Account created successfully")
-        LSData.push(obj);
-        localStorage.setItem("sign-up",JSON.stringify(LSData))
+
+    if(email == "" && password == "") alert("Please enter email and new password")
+    else if(email == "") alert("Please enter email")
+    else if(password == "") alert("Please create password")
+    else if(name == "") alert("Please enter name")
+    else{
+        savedData.push({ name, email, password });
+        localStorage.setItem("signup", JSON.stringify(savedData));
+        alert("Account created successfully!");
+        window.location.href = "login.html";
     }
-})
+    });
 </script>
