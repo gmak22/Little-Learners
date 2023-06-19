@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses | Little Learners</title>
     <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -16,7 +17,7 @@
                 <img src="/images/Logo.png" alt="">
             </div>
             <div id="navmenu">
-                <a href="homepage.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="learn.html">Learn with fun</a>
                 <a href="courses.html">Courses</a>
                 <a href="">Admissions</a>
@@ -25,6 +26,8 @@
             <div id="navbuttons">
                 <button id="loginBtn">Log in</button>
                 <button id="signupBtn">Sign up</button>
+                <p id="userName" style="display: none;"></p>
+                <button id="logoutBtn">Log out</button>  
             </div>
         </div>
         <h1>Our Courses</h1>
@@ -32,7 +35,7 @@
             <div>
                 <img src="https://static9.depositphotos.com/1705350/1181/v/450/depositphotos_11813793-stock-illustration-alphabet-letters.jpg" alt="">
                 <h2> Alphabet Adventures</h2>
-                <p>Join us on an exciting journey through the alphabet! In this course, children will learn the letters of the alphabet, their sounds, and how to write them. Through interactive games, songs, and activities, they will develop and expand their vocabulary. By the end of the course, they will be confident in recognizing and identifying letters, laying a strong foundation for reading and writing.</p>
+                <p>Join us on an exciting journey through the alphabet! In this course, children will learn the letters of the alphabet, their sounds, and how to write them. Through interactive games, songs, and activities, they will develop and expand their vocabulary. By the end of the course, they will be confident in recognizing and identifying letters.</p>
                 <button>Know More</button>
             </div>
             <div>
@@ -44,7 +47,7 @@
             <div>
                 <img src="https://lirp.cdn-website.com/3735b8d4/dms3rep/multi/opt/shutterstock_1059655772-63f4c62a-1920w.jpg" alt="">
                 <h2>Science Explorers</h2>
-                <p>Get ready to be a scientist! In this course, children will embark on exciting scientific explorations. They will learn about various scientific concepts through hands-on experiments, observation, and discovery. From the wonders of nature to basic principles of physics and chemistry, they will develop a curious and analytical mindset. Engaging demonstrations, interactive quizzes, and fun facts will fuel their passion for scientific learning.</p>
+                <p>Get ready to be a scientist! In this course, children will embark on exciting scientific explorations. They will learn about various scientific concepts through hands-on experiments, observation, and discovery. Engaging demonstrations, interactive quizzes, and fun facts will fuel their passion for scientific learning.</p>
                 <button>Know More</button>
             </div>
             <div>
@@ -68,22 +71,18 @@
             <div>
                 <img src="https://m.media-amazon.com/images/S/amzn-author-media-prod/efo1qjl69htbs5ugh8t62v6odj._SY300_.jpg" alt="">
                 <h2>Language Adventures</h2>
-                <p>Embark on a language-learning adventure! In this course, children will be introduced to different languages and cultures. Through fun activities, songs, and games, they will develop basic language skills, including vocabulary, pronunciation, and greetings. They will explore different cultures and traditions, fostering a love for languages and a global perspective.</p>
+                <p>Embark on a language-learning adventure! In this course, children will be introduced to different languages and cultures. Through fun activities, songs, and games, they will develop basic language skills,pronunciation. They will explore different cultures and traditions, fostering a love for languages and a global perspective.</p>
                 <button>Know More</button>
             </div>
         </div>
+        <!-- FOOTER -->
+        <div id="footer">
+            <p>@2023 Little Learners. All rights reserved</p>
+            <p>Terms of Use</p>
+            <p>Privacy Policy</p>
+            <p>Design By Orix Agency</p>
+        </div>
     </div>
+    <script src="auth.js"></script>
 </body>
 </html>
-<script>
-    let loginBtn = document.querySelector("#loginBtn")
-    let signupBtn = document.querySelector("#signupBtn")
-
-    loginBtn.addEventListener("click", () => {
-        window.location.href = "login.html"
-    })
-
-    signupBtn.addEventListener("click", () => {
-        window.location.href = "signup.html"
-    })
-</script>

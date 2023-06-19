@@ -15,54 +15,47 @@
             <h2 style="text-align: center;">Log in to your account</h2>
             <label for="email" class="label" style="text-align: left;">Email</label>
             <br>
-            <input type="email" id="email" placeholder="Enter your email">
+            <input type="email" id="emailInput" placeholder="Enter your email">
             <br>
             <label for="password" class="label">Password</label>
             <br>
-            <input type="password" id="password" placeholder="Enter your password">
+            <input type="password" id="passwordInput" placeholder="Enter your password">
             <br>
-            <div style="text-align: center;"><button id="loginBtn" >Log in</button></div>
+            <div style="text-align: center;"><button id="loginBtn">Log in</button></div>
             
             <div id="notify">
                 <p>Not a member?</p>
-                <a href="./signup.html">Sign up</a>
+                <a href="signup.html">Sign up</a>
             </div>
         </form>
     </div>
-    
 </body>
 </html>
 <script>
-    let form = document.querySelector("#myForm")
-    let email =  document.querySelector("#email")
-    let password =  document.querySelector("#password")
-    let loginBtn = document.querySelector("#loginBtn")
-
-    let LSData=JSON.parse(localStorage.getItem("sign-up")) || [];
-
-    form.addEventListener("submit", function(a){
-    a.preventDefault();
-
-    let flag = false;
-    for(let i=0;i<LSData.length;i++)
-    {
-        if(LSData[i].email !== "" || LSData[i].password !== "")
-        {
-            if(LSData[i].email === email.value && LSData[i].password === password.value)
-            {
-                flag = true;
-            }
-        }
-    }
-
-    if(flag==true)
-    {
-        alert("Logged in")
-        window.location.href = "homepage.html"
-    }
-    else
-    {
-        alert("Incorrect email or password");
-    }
-})    
+        let form = document.querySelector("#myForm");
+        let emailInput = document.querySelector("#emailInput");
+        let passwordInput = document.querySelector("#passwordInput");
+        let loginBtn = document.querySelector("#loginBtn");
+      
+        loginBtn.addEventListener("click", (a) => {
+          a.preventDefault();
+          let savedData = JSON.parse(localStorage.getItem("signup")) || [];
+          let email = emailInput.value;
+          let password = passwordInput.value;
+      
+          let found = savedData.find(
+            (data) => data.email === email && data.password === password
+          );
+      
+          if (found) {
+            localStorage.setItem("login", JSON.stringify(found));
+            alert("Login successful!")
+            window.location.href = "index.html"; 
+          } 
+          
+          else 
+          {
+            alert("Invalid email or password");
+          }
+        });
 </script>
