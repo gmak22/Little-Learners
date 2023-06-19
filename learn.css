@@ -29,13 +29,13 @@ html{
 }
 
 #logo{
-    width: 10%;
+    width: 150px;
     display: flex;
     align-items: center;
 }
 
 #logo img{
-    width: 100%;
+    width: 150px;
 }
 
 #navbar > div:nth-child(2){

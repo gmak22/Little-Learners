@@ -86,7 +86,7 @@
     border: 1px solid black;
     padding: 5px;
     border-radius: 20px;
-    background-color: rgb(142, 189, 250);
+    background-color: rgb(152, 195, 251);
 }
 
 #logoutBtn{
@@ -540,7 +540,12 @@ h3{
     }
 
     #logo{
-        width: 30%;
+        width: 100px;
+
+    }
+    
+    #logo img{
+        width: 100px;
     }
 
     /* TOP */
